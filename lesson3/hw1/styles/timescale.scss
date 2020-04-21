@@ -1,0 +1,28 @@
+    // стили боковой временной шкалы
+    .calendar {
+        &__time-scale {
+            display: flex;
+            flex-direction: column;
+            color: grey;
+            width: 55px;
+            margin-top: 5px;
+            &_hours {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-end;
+                padding-right: 10px;
+                width: 55px;
+                height: 60px;
+                font-size: 12px;
+            }
+            &_grinvich {
+                font-size: 12px;
+                margin: 5px;
+                padding-top: 60px;
+            }
+        }
+        &__week-container {
+            display: flex;
+        }
+    }
