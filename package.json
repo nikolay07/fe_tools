@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nikolay07/fe_tools/issues"
   },
-  "homepage": "https://github.com/nikolay07/fe_tools#readme"
+  "homepage": "https://github.com/nikolay07/fe_tools#readme",
+  "devDependencies": {
+    "jest": "^25.4.0"
+  }
 }
