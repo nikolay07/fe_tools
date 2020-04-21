@@ -6,13 +6,18 @@
     "scripts": {
         "test": "jest",
         "test:watch": "jest --watch",
-        "build:styles": "sass ./src/styles/index.scss ./dist/styles.css"
+        "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
+        "copy:html": "cp ./src/index.html ./dist/index.html",
+        "copy:scripts": "cp -R ./src/scripts ./dist/scripts"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
         "@babel/preset-env": "^7.9.5",
+        "copy": "^0.3.2",
+        "copyfiles": "^2.2.0",
+        "cpx": "^1.5.0",
         "jest": "^25.4.0",
         "sass": "^1.26.3"
     }
