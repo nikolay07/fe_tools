@@ -6,7 +6,7 @@
     "scripts": {
         "test": "jest",
         "test:watch": "jest --watch",
-        "build:styles": "sass"
+        "build:styles": "sass ./src/styles/index.scss ./dist/styles.css"
     },
     "keywords": [],
     "author": "",
