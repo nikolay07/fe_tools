@@ -6,7 +6,8 @@
     "scripts": {
         "test": "jest",
         "test:watch": "jest --watch",
-        "copy:html": "cp ./src/index.html ./dist/index.html",
+        "copy:html": "cp ./index.html ./dist/index.html",
+        "build:styles": "sass ./styles/index.scss ./dist/styles.css",
         "build:scripts": "webpack -p",
         "clean": "rm -rf ./dist",
         "build": "npm-run-all clean build:* copy:*",
