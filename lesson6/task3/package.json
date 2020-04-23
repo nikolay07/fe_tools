@@ -6,12 +6,11 @@
     "scripts": {
         "test": "jest",
         "test:watch": "jest --watch",
+        "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
         "copy:html": "cp ./src/index.html ./dist/index.html",
-        "copy:css": "cp ./styles.css ./dist/styles.css",
-        "build:scripts": "webpack -p",
+        "build:scripts": "webpack ./src/scripts/index.js -p",
         "clean": "rm -rf ./dist",
-        "build": "npm-run-all clean build:* copy:*",
-        "watch": "webpack -d --devtools eval-source-maps -w"
+        "build": "npm-run-all clean build:* copy:*"
     },
     "keywords": [],
     "author": "",
