@@ -1,0 +1,19 @@
+// стили отображаемого в календаре события
+.todayWeek {
+    background-color: coral;
+    color: white;
+}
+
+.nextWeek {
+    background-color: green;
+    border-radius: 5px;
+    width: 20px;
+    color: hotpink;
+}
+
+.prewWeek {
+    background-color: green;
+    border-radius: 5px;
+    width: 20px;
+    color: hotpink;
+}
