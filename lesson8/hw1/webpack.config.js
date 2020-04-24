@@ -1,9 +1,10 @@
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = (env, argv) => {
-    const isProduction = argv.mode === 'production';
-
+    const isProduction = argv.mode === "Production";
     const config = {
         entry: "./src/index.js",
         output: {
@@ -11,6 +12,10 @@ module.exports = (env, argv) => {
         },
         module: {
             rules: [
+                {
+                    test: /.js$/,
+                    use: ['babel-loader']
+                },
                 {
                     test: /.s?css$/,
                     use: [
@@ -37,20 +42,21 @@ module.exports = (env, argv) => {
             ],
         },
         plugins: [
+            new webpack.ProgressPlugin(),
+            new CleanWebpackPlugin(),
             new htmlWebpackPlugin({
                 template: './src/index.html'
-            })
+            }),
         ],
         devServer: {
             port: 9000,
             hot: true,
         }
-    };
+    }
     if (isProduction) {
         config.plugins.push(new MiniCssExtractPlugin({
             filename: '[name].css',
-        }));
+        }))
     }
- 
     return config;
 }

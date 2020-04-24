@@ -1,3 +1,5 @@
+// file path: src/index.js
+
 import renderProfile from './profile/renderProfile';
 import './index.css';
 

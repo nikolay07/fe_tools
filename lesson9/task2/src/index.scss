@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  background-color: coral;
+  border-radius: 8px;
+  padding: 8px;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.input-block {
+  display: flex;
+
+  &__input-button {
+    height: 32px;
+    min-width: 64px;
+    margin-left: 16px;
+    border: 3px solid #ccc;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+}
+
+.task-input {
+  height: 32px;
+  border: 3px solid #ccc;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.list {
+  padding: 0px;
+  margin: 0px;
+
+  &__item {
+    height: 40px;
+    background-color: wheat;
+    margin: 8px 0px;
+    padding: 8px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__item-done {
+    opacity: 0.7;
+  }
+
+  &__item-done &__item-span-text {
+    text-decoration: line-through;
+  }
+
+  &__item-checkbox {
+    display: inline-block;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  &__delete-btn {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    transform: rotate(45deg);
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  &__delete-btn::before {
+    content: "+";
+  }
+}

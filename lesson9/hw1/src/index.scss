@@ -1,0 +1,19 @@
+@import "./styles/breakpoints.scss";
+@import "./styles/header.scss";
+@import "./styles/navigation.scss";
+@import "./styles/popUp.scss";
+@import "./styles/dayCells.scss";
+@import "./styles/loader.scss";
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.week-grid {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 10px;
+} 

@@ -1,3 +1,5 @@
+// file path: src/profile/renderProfile.js
+
 import './profile.scss';
 
 export default ({ name, location }) => {

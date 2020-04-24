@@ -1,0 +1,104 @@
+.navigation {
+  position: fixed;
+  z-index: 11;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: white;
+  margin-top: 64px;
+
+  
+
+
+  &__grid {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+    width: 100vw;
+    @include for-middle-down {
+      justify-content: space-between;
+      margin-left: 28px;
+    }
+
+    @include for-small-down {
+      margin-left: 0px;
+    }
+  }
+  
+
+  &__time-periods {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__day {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    margin-top: 20px;
+
+    @include for-middle-down {
+      margin-left: 13px;
+      margin-right: 13px;
+    }
+
+    &:last-child {
+      margin-right: 70px;
+    }
+
+    &_selected {
+      color: #1a73e8;
+    }
+  }
+
+  &__gmt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 50px;
+    width: 55px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #3c4043;
+
+    @include for-middle-down {
+      display: none;
+    }
+  }
+
+  &__day-of-week {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    color: #70757a;
+  }
+
+  &__date-of-month {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 5px;
+    color: #70757a;
+
+
+    @include for-middle-down {
+      font-size: 18px;
+      width: 25px;
+      height: 25px;
+    }
+    &_selected {
+      background-color: #1a73e8;
+      color: white;
+    }
+  }
+}

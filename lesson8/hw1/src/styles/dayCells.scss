@@ -1,0 +1,149 @@
+.day-cells {
+  position: relative;
+  margin-top: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  @include for-middle-down {
+    padding: 0 10px;
+  }
+}
+
+.day-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-right: 1px solid #d2d0d0;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &__hour-cell {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10px;
+    height: 60px;
+    border-top: 1px solid #d2d0d0;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: inset 0px 0px 2px 1px rgba(26, 115, 232, 1);
+    }
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  &__reminder-item {
+    position: absolute;
+    top: 0px;
+    font-size: 14px;
+    background-color: rgb(215, 219, 239);
+    padding: 2px 4px;
+    border-radius: 4px;
+    width: 10vw;
+    z-index: 1;
+    box-shadow: 0px -2px 20px -11px #000000;
+    border: 1px solid #b7b7b7;
+    cursor: pointer;
+
+    @include for-middle-down {
+      font-size: 8px;
+      width: 50px;
+      overflow: hidden;
+    }
+
+    @include for-small-down {
+      font-size: 8px;
+      width: 40px;
+      overflow: hidden;
+    }
+
+    &:hover {
+      box-shadow: 0px -2px 35px -11px #000000;
+      transition: box-shadow 0.3s ease-in-out;
+      z-index: 10;
+    }
+  }
+  &__reminder-item-number {
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+
+    @include for-middle-down {
+      display: none;
+    }
+  }
+
+  &__reminder-item-title {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 8vw;
+  }
+  &__current-time-line {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: #ea4335;
+    width: 11vw;
+    height: 2px;
+    z-index: 5;
+    margin-top: -1px;
+  }
+  &__current-time {
+    background: #ea4335;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 2px 4px;
+    @include for-middle-down {
+      display: none;
+    }
+  }
+}
+
+.day-columns {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 1;
+  margin-right: 30px;
+
+  @include for-middle-down {
+    margin-right: 0px;
+  }
+}
+
+.hours-column {
+  display: flex;
+  flex-direction: column;
+  color: grey;
+
+  @include for-middle-down {
+    position: absolute;
+    left: -23px;
+    top: 3px;
+  }
+
+  &__hour-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-right: 10px;
+    width: 55px;
+    height: 60px;
+    font-size: 12px;
+    @include for-middle-down {
+      font-size: 8px;
+
+    }
+  }
+}
