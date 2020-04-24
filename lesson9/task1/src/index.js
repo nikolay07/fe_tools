@@ -14,5 +14,5 @@ const profile = {
 
 printProfile(profile);
 // eslint-disable
-// console.log(profile);
+console.log(profile);
 // eslint-enable
