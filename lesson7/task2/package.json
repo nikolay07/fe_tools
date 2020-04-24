@@ -6,11 +6,9 @@
     "scripts": {
         "test": "jest",
         "test:watch": "jest --watch",
-        "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
-        "copy:html": "cp ./src/index.html ./dist/index.html",
-        "build:scripts": "webpack ./src/scripts/index.js -p",
+        "build:scripts": "webpack -p",
         "clean": "rm -rf ./dist",
-        "build": "npm-run-all clean build:* copy:*",
+        "build": "npm-run-all clean build:*",
         "watch": "webpack -d --devtools eval-source-maps -w"
     },
     "keywords": [],
@@ -26,7 +24,8 @@
         "html-webpack-plugin": "^4.2.0",
         "jest": "^25.4.0",
         "mini-css-extract-plugin": "^0.9.0",
-        "sass": "^1.26.3",
+        "npm-run-all": "^4.1.5",
+        "sass": "^1.26.5",
         "sass-loader": "^8.0.2",
         "style-loader": "^1.1.4",
         "url-loader": "^4.1.0",
@@ -34,8 +33,8 @@
         "webpack-cli": "^3.3.11"
     },
     "dependencies": {
+        "clean-webpack-plugin": "^3.0.0",
         "core-js": "^3.6.5",
-        "npm-run-all": "^4.1.5",
         "run-all": "^1.0.1"
     }
 }

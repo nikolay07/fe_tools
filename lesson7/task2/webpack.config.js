@@ -1,10 +1,10 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const htmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: "./src/scripts/index.js",
+    entry: "./src/index.js",
     output: {
         filename: "bundle.js"
     },
@@ -15,7 +15,7 @@ module.exports = {
             },
             {
                 test: /.s?css$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -33,7 +33,7 @@ module.exports = {
     plugins: [
         new webpack.ProgressPlugin(),
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
+        new htmlWebpackPlugin({
             template: './src/index.html'
         }),
         new MiniCssExtractPlugin({
