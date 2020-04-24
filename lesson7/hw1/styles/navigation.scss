@@ -1,0 +1,23 @@
+// стили навигации
+.header {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid #d2d0d0;
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.button {
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+    margin: 0 10px;
+    font-weight: 700;
+    color: darkblue;
+    font-size: 20px;
+}
