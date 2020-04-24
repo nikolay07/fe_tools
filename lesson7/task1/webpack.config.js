@@ -1,5 +1,5 @@
-const htmlWebpackPlugin = require("html-webpack-plugin");
-const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: "./src/index.js",
@@ -9,7 +9,7 @@ module.exports = {
     module: {
         rules: [{
                 test: /.s?css$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -25,10 +25,10 @@ module.exports = {
         ],
     },
     plugins: [
-        new htmlWebpackPlugin({
+        new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
-        new miniCssExtractPlugin({
+        new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
     ]
