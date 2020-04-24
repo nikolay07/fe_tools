@@ -1,4 +1,4 @@
-export let tasks = [];
+export const tasks = [];
 
 export const getTasks = () => {
   const newArr = JSON.parse(localStorage.getItem('arrOfTasks'));
